@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VigilCloak Crypto Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  <div id="auth-container">
+    <h1 id="auth-title">VigilCloak Login</h1>
+    <div id="auth-error" class="error"></div>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button id="auth-action-btn">Login</button>
+    <p id="toggle-auth">Don’t have an account? <a href="#">Register</a></p>
+  </div>
+
+  <div id="tracker-container" class="hidden">
+    <h2>VigilCloak Cryptocurrency Tracker</h2>
+    <button id="logout-btn">Logout</button>
+    <select id="crypto-type">
+      <option value="btc">Bitcoin</option>
+      <option value="eth">Ethereum</option>
+    </select>
+    <input type="text" id="address" placeholder="Wallet Address">
+    <button id="track-btn">Track</button>
+    <div id="results"></div>
+    <div id="sankey-diagram" style="width:100%; height:400px;"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+/* Global Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Input Fields and Buttons */
+input,
+select,
+button {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+input::placeholder,
+select {
+  color: #aaa;
+}
+
+button {
+  background-color: #1f1f1f;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+/* Error Message */
+.error {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Auth Container and Tracker Container */
+#auth-container,
+#tracker-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: #111;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+  input,
+  select,
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* Transaction List Container */
+.transaction {
+  background-color: #1c1c1c;
+  border: 1px solid #444;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s;
+}
+
+.transaction:hover {
+  transform: scale(1.02);
+}
+
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.transaction-header h3 {
+  font-size: 1.1rem;
+  color: #4caf50;
+  word-wrap: break-word;
+}
+
+.transaction-header .crypto-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Address Lists */
+.address-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.address-list li {
+  word-break: break-word;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+/* Amount Badge */
+.amount {
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: #444;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.amount.btc {
+  color: #f7931a;
+}
+
+.amount.eth {
+  color: #3c3cfc;
+}
+
+/* Error Handling */
+.error {
+  color: #ff4d4d;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1rem;
+}
+
+/* Results Section Styling */
+#results h2 {
+  margin: 10px 0;
+  color: #4caf50;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+/* Transaction Hash Styling */
+.transaction-header h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: #fff;
+}
+
+.transaction-hash {
+  display: inline-block;
+  background-color: #333;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #4caf50;
+  transition: background-color 0.3s;
+  overflow-wrap: anywhere;
+}
+
+.transaction-hash:hover {
+  background-color: #555;
+}
+
+/* Tooltip Styling */
+.transaction-hash:hover::after {
+  content: attr(data-full-hash);
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 100;
+}
+
+/* Logout Button Styling */
+#logout-btn {
+  background-color: #c0392b; /* A red color for the logout button */
+  margin-bottom: 20px;
+}
+
+#logout-btn:hover {
+  background-color: #e74c3c;
+}
